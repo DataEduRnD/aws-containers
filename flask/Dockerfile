@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # By default, listen on port 5000
-# EXPOSE 5000/tcp
+EXPOSE 5000/tcp
 
 # Set the working directory in the container
 WORKDIR /app
@@ -20,6 +20,7 @@ CMD gunicorn --bind 0.0.0.0:5000 app:app
 # COPY app.py .
 
 # docker build -t flask-container ./flask
+# flask run --host 0.0.0.0
 # docker run -p 5000:5000 flask-container flask run --host 0.0.0.0
 # docker run -it flask-container /bin/sh  
 # docker exec flask-container /bin/sh

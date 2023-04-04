@@ -8,5 +8,5 @@ EXPOSE 7070
 # nginx 컨테이너만 단독 실행 시에는 코멘트 해제
 # CMD ["nginx", "-g", "daemon off;"]  
 
-# docker build -t nginx . ; 이미지 빌드
+# docker build --no-cache -t nginx ./nginx ; 이미지 빌드
 # docker run -p 80:80 -p 7070:7070 nginx ; 컨테이너 시작
