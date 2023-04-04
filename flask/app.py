@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return f"Cotainer ID: {socket.gethostname()}"
+    return f"nginx --> flask CONTAINER ID: {socket.gethostname()}"
     # return "Hello, app.py"
 
 if __name__ == "__main__":
